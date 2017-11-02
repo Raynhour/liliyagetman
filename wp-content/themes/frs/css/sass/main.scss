@@ -1,0 +1,1090 @@
+ //--------------------Fonts-------------------------*/
+ @font-face {
+    font-family: "FuturaDemic"; /* Имя шрифта */
+    src: url(../fonts/FuturaDemiC.otf); /* Путь к файлу со шрифтом */
+   }
+
+
+$Futura: "FuturaDemic",sans-serif;
+$Forum: "Forum", cursive;
+
+$sizemenu:30px;
+$fontm:14px;
+$mfonttitle:25px;
+$deskmenu:20px;
+//--------------------Fonts End-------------------------*/
+//--------------------Mobile-------------------------*/
+$min-mobile: 480px;
+$max-mobile: 768px;
+$tablet: "(min-width: 768px) and (max-width: 991px)";
+//--------------------Mobile End-------------------------*/
+//--------------------Color-------------------------*/
+$white: #fff;
+$blue: #a9c2d9;
+//--------------------Color End-------------------------*/
+body {
+	margin:0px;
+	padding:0px;
+	background-color:$white;
+	text-decoration: none;
+}
+//--------------------Header-------------------------*/
+.header {
+	&-nav {
+		position: fixed;
+		left:0px;
+		z-index: 1;
+		background: rgba(0,0,0, .5);
+		padding-right: 20px;
+		line-height: 40px;
+
+		&__list {
+			list-style-type:none;
+			margin: 0px;
+		}
+		&__item {
+			display: inline-block;
+		}
+		&__link {
+			display: block;
+			font-family: $Futura;
+			font-size: $deskmenu;
+			padding-left: 40px;
+			font-style: italic;
+			text-transform: capitalize;
+			color:$white;
+			&:hover {
+				text-decoration: none;
+				color:$white;
+				cursor:pointer;
+			}
+			&:link {
+				text-decoration: none;
+			}
+		}
+	}
+	&-logo {
+		text-align: center;
+	}
+	&-contact {
+		&__email {
+			font-size: $sizemenu;
+			color: $white;
+			font-family: $Futura;
+			margin:0px;
+			font-style: italic;
+		}
+		&__link {
+			font-size: $sizemenu;
+			color:$white;
+			font-family: $Futura;
+			font-style: italic;
+			&:link {
+				text-decoration: none;
+				color:$white;
+			}
+			&:hover {
+				color:$white;
+				text-decoration: none;
+			}
+		}
+	}
+	&-mobile {
+		display: none;
+		&_fixed {
+			position: fixed;
+			z-index: 1;
+			width: 100%;
+		}
+		&__icon {
+			background:rgba(255,255,255, .5);
+			padding: 10px;
+			display: none;
+		}
+		&__list {
+			list-style-type:none;
+			padding: 0px;
+		}
+		&__item {
+			display: inline-block;
+		}
+		&__link {
+			display: block;
+			font-family: $Futura;
+			font-size: $fontm;
+			padding-left: 10px;
+			font-style: italic;
+			text-transform: capitalize;
+			color:$white;
+			&:link {
+				text-decoration: none;
+				color:$white;
+			}
+			&:hover {
+				text-decoration: none;
+				color:$white;
+			}
+		}
+	}
+}
+//--------------------Header End-------------------------*/
+//--------------------Banner-------------------------*/
+.topwrapper {
+	background: url("../img/head.jpg");
+	background-size:cover;
+	padding-top: 40px;
+	height: 100vh;
+    background-position: center center;
+}
+
+.banner {
+	padding-top: 25px;
+	&__title {
+		margin:0px;
+		font-size:48px;
+    	padding-top: 128px;
+		color:$white;
+		text-align:center;
+		font-style: italic;
+		text-transform: uppercase;
+		font-family: $Futura;
+	}
+	&__btn { 
+		text-align: center;
+	}
+	&__link{
+		display: inline-block;
+		color: $white;
+		text-align: center;
+		padding: 50px;
+		font-size: 20px;
+		background: url("../img/headerbutton.png") no-repeat;
+		background-size:contain;
+		background-position: center center;
+		&:link {
+			text-decoration: none;
+			color:$white;
+		}
+		&:hover {
+			text-decoration: none;
+			color:$white;
+		}
+	}
+	&__social {
+		display: inline-block;
+		text-align: center;
+		border-radius: 50px;
+		border:5px solid blue;
+		color: $white;
+	}
+}
+//--------------------Banner End-------------------------*/
+//--------------------Main-menu-------------------------*/
+.category {
+	margin-top: 5px;
+	display: flex;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;	
+	&__link {
+	flex: 1 0 24%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 24%;
+    -ms-flex: 1 0 24%;
+    width: 480px;
+    height: 380px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-size: cover;
+	background:url("../img/categoryflowers.jpg")no-repeat;
+	&:link {
+		text-decoration: none;
+		color:$white;
+	}
+	&:hover {
+		text-decoration: none;
+		color:$white;
+	}
+	}
+	&__title {
+		text-align: center;
+		background-color: rgba(48,46,50,0.3);
+		display: block;
+		width: 100%;
+		min-height: 120px;
+		max-height: 120px;
+		font-size: 30px;
+		font-style: italic;
+		color: $white;
+		font-family: $Futura;
+		text-transform: uppercase;
+		 display: -webkit-box;
+    	display: -ms-flexbox;
+    	display: flex;
+   		 -webkit-box-pack: center;
+       	 -ms-flex-pack: center;
+            justify-content: center;
+   		 -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
+	&__text {
+	text-align: center;
+	}
+}
+//--------------------Main-menu End-------------------------*/
+//--------------------Auction-------------------------*/
+.auction {
+	margin-top: 2px;
+	background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#92fe9d));
+    background: -webkit-linear-gradient(left, #00c9ff, #92fe9d);
+    background: -o-linear-gradient(left, #00c9ff, #92fe9d);
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+	background-size:cover;
+	background-position:center center;
+	text-align: center;
+	&__link {
+		padding-top: 45px;
+		padding-bottom: 45px;
+		display: block;	
+	}
+	&__title {
+		color: $white;
+		font-style: italic;
+		font-family: $Futura;
+		font-size: 40px;
+	}
+}
+//--------------------Auction End-------------------------*/
+//--------------------Creator-------------------------*/
+.creator {
+	margin-top: 2px;
+	background:url("../img/creator.jpg");
+	background-size:cover;
+	background-position:center center;
+	padding-top: 95px;
+	padding-bottom: 70px;
+	&__name {
+		text-align: center;
+		font-size: 48px;
+		color:$white;
+		font-style: italic;
+		font-family: $Futura;
+		text-transform: uppercase;
+		margin: 0px;
+		margin-bottom: 45px;
+	}
+	&__description {
+		text-align: center;
+		font-family: $Forum;
+		font-size: 20px;
+		color: $white;
+		font-style: italic;
+	}
+	&__btn {
+		text-align: center;
+	}
+	&__link {
+		display: inline-block;
+		color: $white;
+		text-align: center;
+		padding: 50px;
+		font-style: italic;
+		font-size: 20px;
+		background: url("../img/headerbutton.png") no-repeat;
+		background-size:contain;
+		background-position: center center;
+		&:hover {
+			text-decoration: none;
+			color:$white;
+		}
+		&:link {
+			text-decoration: none;
+			color:$white;			
+		}
+	}
+	&_mobile {
+		display:none;
+	}
+}
+//--------------------Creator End-------------------------*/
+//--------------------Gallery-------------------------*/
+.gallery {
+	padding-top: 45px;
+	padding-bottom: 115px;
+	&__title {
+		margin: 0px;
+		font-family: $Futura;
+		font-size: 40px;
+		font-style: italic;
+		text-align: center;
+		color:#01a29a;
+		font-style: italic;
+	}
+	&-menu {
+		&__list {
+			list-style-type:none;
+			text-align: center;
+			padding: 0px;
+		}
+		&__item {
+			display: inline-block;
+		}
+		&__link {
+			color:#01a29a;
+			font-size: 25px;
+			display: block;
+			font-style: italic;
+			padding-left: 10px;
+			padding-right: 10px;
+			cursor:pointer;
+			&:link {
+				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&-goods {
+	margin-top: 5px;
+	display: flex;
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; 
+    }
+    &-box {
+    &__img {
+    	padding-top: 40px;
+    	width: 100%;
+    	border-bottom: 2px dashed #01a29a;
+    	padding-bottom: 15px;
+    	}
+    &__title {
+    	text-align: center;
+    	margin: 0px;
+    	padding-top: 10px;
+    	font-style: italic;
+    	font-size: 30px;
+    	font-family: $Futura;
+    }
+    &__pay {
+    	text-align: center;
+    	font-family: $Forum;
+    	color:#454545;
+    	font-size: 36px;
+    	font-style: italic;
+    	margin: 0px;
+    	padding-top: 10px;
+    }
+
+	}
+	.inv, .decupage, .improvization {
+		display: none;
+	}
+}	
+//--------------------Gallery End-------------------------*/
+//--------------------Pay-------------------------*/
+.pay {
+	background-color:#6ec4cc;
+	background-size:cover;
+	padding-bottom: 15px;
+	&__img {
+		float:right;
+		padding-top: 55px;
+	}
+	&__title {
+		color:$white;
+		font-size: 40px;
+		font-family: $Futura;
+		font-style: italic;
+		padding-left: 70px;
+		margin: 0px;
+		padding-top: 55px;
+	}
+	&__number {
+		color:$white;
+		font-size: 40px;
+		font-family: $Futura;
+		font-style: italic;
+		padding-left: 70px;
+		padding-top: 90px;		
+	}
+}
+//--------------------Pay End-------------------------*/
+//--------------------Reviews-------------------------*/
+.reviews {
+	background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#92fe9d));
+    background: -webkit-linear-gradient(left, #00c9ff, #92fe9d);
+    background: -o-linear-gradient(left, #00c9ff, #92fe9d);
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+	background-size:cover;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	&__title {
+		font-size: 40px;
+		font-family: $Futura;
+		color:$white;
+		font-style: italic;
+		text-align: center;
+		margin:0px;
+	}
+	&__avatar {
+		background: url("../img/avatar.jpg") no-repeat;
+		background-size: cover;
+		background-position: center center;
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		display: inline-block;
+	}
+	&__slider {
+	padding-top: 45px;
+	width:200px;
+	background-size: cover;
+	background-position: center center;
+	border-radius: 50%;
+	margin:0 auto;
+	}
+	&__arrow {
+		&_left {
+			background: url("../img/leftarrow.png") no-repeat;
+			background-size:contan;
+			width: 60px;
+			height: 50px;
+			margin:0 auto;
+			position: absolute;
+			right: 124px;
+    		bottom: 400px;
+    		cursor: pointer;
+		}
+		&_right {
+			background: url("../img/rightarrow.png") no-repeat;
+			background-size:contan;
+			width: 60px;
+			height: 50px;
+			margin:0 auto;
+			position: absolute;
+			left: 124px;
+    		bottom: 400px;
+    		cursor: pointer;
+		}
+	}
+	&__name {
+		color:black;
+		font-family: $Futura;
+		font-size: 24px;
+		text-align: center;
+		font-style: italic;
+		margin:0px;
+		padding-top: 30px;
+		font-style: italic;
+	}
+	&__description {
+		padding-top: 15px;
+		text-align: center;
+		width: 25%;
+		margin:0 auto;
+		font-style: italic;
+		font-family: $Forum;
+		font-size: 20px;
+		color: black;
+	}
+	&-text {
+		margin: 0 auto;
+		text-align: center;
+		&__name {
+			text-align: center;
+			display: inline-block;
+			margin: 0 auto;
+			color:black;
+			font-family: $Futura;
+			font-style: italic;
+			font-size: 24px;
+			text-align: center;
+			padding-top: 30px;
+			font-style: italic;
+		}
+		&__description {
+			padding-top: 15px;
+			text-align: center;
+			margin:0 auto;
+			font-family: $Forum;
+			font-style: italic;
+			font-size: 20px;
+			color: black;
+			width:30%;
+		}
+	}
+}
+.slick-slide {
+	text-align: center;
+}
+//--------------------Reviews end-------------------------*/
+
+.footer {
+	background-color: #667a7c;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	margin-bottom: 4px;
+	&__social {
+		text-align: center;
+	}
+	&__link {
+		border-radius: 50%;
+		border:5px solid $white;
+		display: inline-block;
+		text-align: center;
+	}
+	&__img {
+		padding: 10px 15px;
+	}
+}
+
+.social {
+		text-align: center;
+	&__link {
+		border-radius: 50%;
+		border:5px solid $white;
+		display: inline-block;
+		text-align: center;
+		line-height: 60px;
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+		margin-right: 5px;
+		-webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+	}
+	&__icon {
+		font-size: 20px;
+		color:$white;
+	}
+}
+
+//slicknav
+.reviews__slider {
+	position: relative;
+	.fa-arrow-left {
+		position: absolute;
+		top: 100px;
+		font-size: 50px;
+		font-style: italic;
+		right: 210px;
+		cursor: pointer;
+	}
+	.fa-arrow-right {
+		position: absolute;
+		top: 110px;
+		font-size: 50px;
+		left: 210px;
+		cursor: pointer;
+	}
+}
+.blog {
+	background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#92fe9d));
+    background: -webkit-linear-gradient(left, #00c9ff, #92fe9d);
+    background: -o-linear-gradient(left, #00c9ff, #92fe9d);
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+    padding-bottom: 30px;
+	&__title {
+		margin: 0px;
+		font-family: $Futura;
+		font-size: 40px;
+		font-style: italic;
+		text-align: center;
+		color:$white;
+		padding-top: 20px;
+		text-transform: capitalize;
+	}
+	&-post {
+		text-align:center;
+		&__title {
+			text-align: center;	
+		}
+		&__link {
+			color:black;
+			font-family: $Forum;
+			font-style: italic;
+			font-size: 30px;
+			font-style: italic;			
+		}
+		&__img {
+			width: 250px;
+			height: 250px;
+		}
+		&__date {
+			margin: 0px;
+			font-family: $Futura;
+			font-style: italic;
+			font-size: 20px;
+		}
+		&__text {
+			font-family: $Forum;
+			font-style: italic;
+			font-size: 20px;
+		}
+	}
+}
+
+.post {
+background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#92fe9d));
+    background: -webkit-linear-gradient(left, #00c9ff, #92fe9d);
+    background: -o-linear-gradient(left, #00c9ff, #92fe9d);
+    background: linear-gradient(to right, #00c9ff, #92fe9d);
+   	text-align: center;
+        &__title {
+		margin:0px;
+		font-size:48px;
+		color:$white;
+		text-transform: uppercase;
+		font-family: $Futura;
+		padding-top: 30px;
+		font-style: italic;
+
+		}
+		    &__img {
+    	width: 250px;
+    	height: 250px;
+   		 }
+    }
+
+
+
+@media screen and (max-width:479px) {
+	.header {
+		&-nav{
+			display: none;
+			&__link {
+				font-size: $fontm;
+				padding-left: 5px;	
+			}
+		}
+		&-contact {
+			display: none;
+			&__email {
+				font-size: $fontm;
+			}
+			&__link {
+				font-size: $fontm;
+			}
+		}
+		&-img {
+			display: none;
+		}
+		&-mobile {
+			&__icon {
+				display: inline-block;
+			}
+		}
+	}
+	.category {
+		&__link {
+		    flex: 1 0 100%;
+		    -webkit-box-flex: 1;
+		    -webkit-flex: 1 0 100%;
+		    -ms-flex: 1 0 100%;
+		}
+	}
+
+	.banner {
+		&__title {
+			font-size: $mfonttitle;
+		}
+	}
+	.topwrapper {
+		padding-top: 5px;
+		padding-bottom: 40px;
+	}
+	.auction {
+		&__title {
+			font-size: $mfonttitle;
+		}
+	}
+	.creator {
+		padding-top: 35px;
+    	background-position: inherit;
+    	height: 150px;
+    	&_vision {
+    		display: none;
+    	}
+    	&_mobile{
+    		background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#92fe9d));
+      		background: -webkit-linear-gradient(left, #00c9ff, #92fe9d);
+      		background: -o-linear-gradient(left, #00c9ff, #92fe9d);
+      		background: linear-gradient(to right, #00c9ff, #92fe9d);
+    		display: block;
+    	}
+		&__name {
+			font-size: $mfonttitle;
+			margin:0px;
+			font-style: italic;
+			color:black;
+			padding-top: 20px;
+		}
+		&__description {
+			padding-top: 15px;
+			font-size: 16px;
+			color:black;
+			font-style: italic;
+			padding-bottom: 20px;
+		}
+		
+	}
+	.gallery {
+		&-menu {
+			&__title {
+				font-size: $mfonttitle;
+			}
+			&__link {
+				font-size: $fontm;
+			}
+		}
+	}
+	.pay {
+		&__img {
+			width: 100%;
+		}
+		&__title {
+			font-size: $mfonttitle;
+			padding-top: 20px;
+			padding-left: 0px;
+			font-style: italic;
+			text-align: center;
+		}
+		&__number {
+			font-size: 20px;
+			padding-left: 0px;
+			font-style: italic;
+			padding-top: 20px;
+			text-align: center;
+		}
+	}
+	.reviews {
+		&__title {
+			font-size: $mfonttitle;
+			font-style: italic;
+		}
+		&__arrow {
+			&_left {
+				right: 260px;
+				bottom: 365px;
+			}
+			&_right {
+				left:260px;
+				bottom: 365px;
+			}
+		}
+		&-text {
+			&__name {
+				font-size: 18px;
+				font-style: italic;
+			}
+			&__description {
+				font-size: 16px;
+				font-style: italic;
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width:$min-mobile) and (max-width:$max-mobile){ 
+	.header {
+		&-nav{
+			display: none;
+			&__link {
+				font-size: $fontm;
+				padding-left: 5px;	
+			}
+		}
+		&-contact {
+			display: none;
+			&__email {
+				font-size: $fontm;
+			}
+			&__link {
+				font-size: $fontm;
+			}
+		}
+		&-mobile {
+			&__icon {
+				display: inline-block;
+			}
+		}
+	}
+	.banner {
+		&__title {
+			font-size: $mfonttitle;
+		}
+	}
+	.topwrapper {
+		padding-top: 5px;
+		padding-bottom: 40px;
+	}
+	.category {
+		&__link {
+		    flex: 1 0 50%;
+		    -webkit-box-flex: 1;
+		    -webkit-flex: 1 0 50%;
+		    -ms-flex: 1 0 50%;
+		}
+	}
+	.auction {
+		&__title {
+			font-size: $mfonttitle;
+		}
+	}
+	.creator {
+		padding-top: 35px;
+    	background-position: inherit;
+    	height: 255px;
+		&__name {
+			font-size: $mfonttitle;
+			margin:0px;
+		}
+		&__description {
+			padding-top: 15px;
+			font-size: 16px;
+		}
+ 	&_vision {
+    		display: none;
+    	}
+    	&_mobile{
+    		background: -webkit-gradient(linear, left top, right top, from(#00c9ff), to(#92fe9d));
+      		background: -webkit-linear-gradient(left, #00c9ff, #92fe9d);
+      		background: -o-linear-gradient(left, #00c9ff, #92fe9d);
+      		background: linear-gradient(to right, #00c9ff, #92fe9d);
+    		display: block;
+    	}
+	}
+	.pay {
+		&__img {
+			width: 100%;
+		}
+		&__title {
+			font-size: $mfonttitle;
+			padding-top: 20px;
+			padding-left: 0px;
+			text-align: center;
+		}
+		&__number {
+			font-size: 20px;
+			padding-left: 0px;
+			padding-top: 20px;
+			text-align: center;
+		}
+	}
+	.reviews {
+		&__title {
+			font-size: $mfonttitle;
+		}
+		&__arrow {
+			&_left {
+				left: 165px;
+				bottom: 300px;
+			}
+			&_right {
+				left:480px;
+				bottom: 300px;
+			}
+		}
+
+		&-text {
+			&__name {
+				font-size: 18px;
+			}
+			&__description {
+				font-size: 16px;
+				width: 50%;
+			}	
+		}
+	}
+}
+
+@media (min-width:1024px) and (max-width:1300px) {
+	.header {
+		&-nav{
+			&__link {
+				font-size: $deskmenu;
+				padding-left: 10px;	
+			}
+		}
+		&-contact {
+			float: right;
+			&__email {
+				font-size: $deskmenu;
+			}
+			&__link {
+				font-size: $deskmenu;
+			}
+		}
+	}
+	.reviews {
+		&__arrow {
+			&_left {
+				bottom: 460px;
+			}
+			&_right {
+				bottom: 460px;
+			}
+		}
+	}
+}
+
+@media (min-width:769px) and (max-width:1023px){ 
+	.header {
+		&-nav{
+			display: none;
+			&__link {
+				font-size: $fontm;
+				padding-left: 5px;	
+			}
+		}
+		&-contact {
+			display: none;
+			&__email {
+				font-size: $fontm;
+			}
+			&__link {
+				font-size: $fontm;
+			}
+		}
+		&-img {
+			display: none;
+		}
+		&-mobile {
+			&__icon {
+				display: inline-block;
+			}
+		}
+	}
+	.banner {
+		&__title {
+			font-size: $mfonttitle;
+		}
+	}
+	.topwrapper {
+		padding-top: 5px;
+		padding-bottom: 40px;
+	}
+	.auction {
+		&__title {
+			font-size: $mfonttitle;
+		}
+	}
+	.creator {
+		padding-top: 35px;
+    	background-position: inherit;
+		&__name {
+			font-size: $mfonttitle;
+			margin:0px;
+		}
+		&__description {
+			padding-top: 15px;
+			font-size: 16px;
+		}
+	}
+	.pay {
+		&__img {
+			display: none;
+		}
+		&__title {
+			font-size: $mfonttitle;
+			padding-top: 20px;
+			padding-left: 0px;
+			text-align: center;
+		}
+		&__number {
+			font-size: 20px;
+			padding-left: 0px;
+			padding-top: 20px;
+			text-align: center;
+		}
+	}
+	.reviews {
+		&__title {
+			font-size: $mfonttitle;
+		}
+		&__arrow {
+			&_left {
+				right: 260px;
+			}
+			&_right {
+				left:260px;
+			}
+		}
+
+		&-text {
+			&__name {
+				font-size: 18px;
+			}
+			&__description {
+				font-size: 16px;
+				width: 50%;
+			}			
+		}
+	}
+}
+
+@media (min-width:1444px) and (max-width:1643px) {
+	.header {
+		&-nav{
+			&__link {
+				font-size: $deskmenu;
+				padding-left: 40px;	
+			}
+		}
+		&-contact {
+			float: right;
+			&__email {
+				font-size: $deskmenu;
+			}
+			&__link {
+				font-size: $deskmenu;
+			}
+		}
+	}
+}
+
+
+@media (min-width:1644px) and (max-width:1733px) {
+	.header {
+		&-nav{
+			&__link {
+				padding-left: 40px;	
+			}
+		}
+		&-contact {
+			float: right;
+		}
+	}
+}
+
+@media (min-width:1744px) and (max-width:9999px) {
+		.header {
+		&-contact {
+			float: right;
+		}
+	}
+}
+
+.active {
+	border-bottom: 2px solid $blue;
+	padding-bottom: 10px;
+	color:#23527c;
+}
